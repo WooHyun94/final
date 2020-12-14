@@ -12,6 +12,80 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <script>
+    let today = new Date();   
+    var week = new Array('월', '화', '수', '목', '금');
+    hour = today.getHours();   
+    
+    if((hour+"").length < 2){
+      hour="0"+hour;      
+    }  
+    
+    function check_vision() {
+      if ((week[today.getDay()] == 1) && (eval(hour) >= 9 && eval(hour) <= 12)){
+        document.write("<img src='vision_dan.png'");
+      }else if((week[today.getDay()] == 1) && (eval(hour) >= 8 && eval(hour) < 9)){
+        document.write("<img src='vision_warn.png'");
+      }else{
+        document.write("<img src='vision_succ.png'");
+      }
+    } 
+    function check_PnC() {
+      if ((week[today.getDay()] == 0) && (eval(hour) >= 12 && eval(hour) <= 15)){
+        document.write("<img src='PnC_dan.png'");
+      }else if((week[today.getDay()] == 0) && (eval(hour) >= 11 && eval(hour) < 12)){
+        document.write("<img src='PnC_warn.png'");
+      }else{
+        document.write("<img src='PnC_succ.png'");
+      }
+    } 
+    function check_AMan() {
+      if ((week[today.getDay()] == 1) && (eval(hour) >= 13 && eval(hour) <= 15)){
+        document.write("<img src='AMan_dan.png'");
+      }else if((week[today.getDay()] == 1) && (eval(hour) >= 12 && eval(hour) < 13)){
+        document.write("<img src='AMan_warn.png'");
+      }else{
+        document.write("<img src='AMan_succ.png'");
+      }
+    } 
+    function check_Employment() {
+      if ((week[today.getDay()] == 4) && (eval(hour) >= 12 && eval(hour) <= 14)){
+        document.write("<img src='Employment_dan.png'");
+      }else if((week[today.getDay()] == 4) && (eval(hour) >= 11 && eval(hour) < 12)){
+        document.write("<img src='Employment_warn.png'");
+      }else{
+        document.write("<img src='Employment_succ.png'");
+      }
+    } 
+    function check_javaWeb() {
+      if ((week[today.getDay()] == 0) && (eval(hour) >= 15 && eval(hour) <= 17)){
+        document.write("<img src='javaWeb_dan.png'");
+      }else if((week[today.getDay()] == 0) && (eval(hour) >= 14 && eval(hour) < 15)){
+        document.write("<img src='javaWeb_warn.png'");
+      }else{
+        document.write("<img src='javaWeb_succ.png'");
+      }
+    } 
+    function check_game() {
+      if ((week[today.getDay()] == 1) && (eval(hour) >= 15 && eval(hour) <= 17)){
+        document.write("<img src='game_dan.png'");
+      }else if((week[today.getDay()] == 1) && (eval(hour) >= 14 && eval(hour) < 15)){
+        document.write("<img src='game_warn.png'");
+      }else{
+        document.write("<img src='game_succ.png'");
+      }
+    } 
+    function check_DB() {
+      if ((week[today.getDay()] == 2) && (eval(hour) >= 15 && eval(hour) <= 17)){
+        document.write("<img src='DB_dan.png'");
+      }else if((week[today.getDay()] == 2) && (eval(hour) >= 14 && eval(hour) < 15)){
+        document.write("<img src='DB_warn.png'");
+      }else{
+        document.write("<img src='DB_succ.png'");
+      }
+    }      
+  </script>
   <style>
     .bd-placeholder-img {
     font-size: 1.125rem;
@@ -85,6 +159,6 @@
     </div>
   </footer>
 </div>
- <script src="script.js"></script>
+ 
 </body>
 </html>
