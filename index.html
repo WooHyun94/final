@@ -23,7 +23,7 @@
     }  
     
     function check_vision() {
-      if ((week[today.getDay()] == 1) && (eval(hour) >= 9 && eval(hour) <= 12)){
+      if ((today.getDay() == 2) && (eval(hour) >= 9 && eval(hour) <= 12)){
         document.write("<img src='vision_dan.png'");
       }else if((week[today.getDay()] == 1) && (eval(hour) >= 8 && eval(hour) < 9)){
         document.write("<img src='vision_warn.png'");
@@ -32,7 +32,7 @@
       }
     } 
     function check_PnC() {
-      if ((week[today.getDay()] == 0) && (eval(hour) >= 12 && eval(hour) <= 15)){
+      if ((today.getDay() == 1) && (eval(hour) >= 12 && eval(hour) <= 15)){
         document.write("<img src='PnC_dan.png'");
       }else if((week[today.getDay()] == 0) && (eval(hour) >= 11 && eval(hour) < 12)){
         document.write("<img src='PnC_warn.png'");
@@ -41,7 +41,7 @@
       }
     } 
     function check_AMan() {
-      if ((week[today.getDay()] == 1) && (eval(hour) >= 13 && eval(hour) <= 15)){
+      if ((today.getDay() == 2) && (eval(hour) >= 13 && eval(hour) <= 15)){
         document.write("<img src='AMan_dan.png'");
       }else if((week[today.getDay()] == 1) && (eval(hour) >= 12 && eval(hour) < 13)){
         document.write("<img src='AMan_warn.png'");
@@ -50,7 +50,7 @@
       }
     } 
     function check_Employment() {
-      if ((week[today.getDay()] == 4) && (eval(hour) >= 12 && eval(hour) <= 14)){
+      if ((today.getDay()] == 5) && (eval(hour) >= 12 && eval(hour) <= 14)){
         document.write("<img src='Employment_dan.png'");
       }else if((week[today.getDay()] == 4) && (eval(hour) >= 11 && eval(hour) < 12)){
         document.write("<img src='Employment_warn.png'");
@@ -59,7 +59,7 @@
       }
     } 
     function check_javaWeb() {
-      if ((week[today.getDay()] == 0) && (eval(hour) >= 15 && eval(hour) <= 17)){
+      if ((today.getDay() == 1) && (eval(hour) >= 15 && eval(hour) <= 17)){
         document.write("<img src='javaWeb_dan.png'");
       }else if((week[today.getDay()] == 0) && (eval(hour) >= 14 && eval(hour) < 15)){
         document.write("<img src='javaWeb_warn.png'");
@@ -68,7 +68,7 @@
       }
     } 
     function check_game() {
-      if ((week[today.getDay()] == 1) && (eval(hour) >= 15 && eval(hour) <= 17)){
+      if ((today.getDay() == 2) && (eval(hour) >= 15 && eval(hour) <= 17)){
         document.write("<img src='game_dan.png'");
       }else if((week[today.getDay()] == 1) && (eval(hour) >= 14 && eval(hour) < 15)){
         document.write("<img src='game_warn.png'");
@@ -77,7 +77,7 @@
       }
     } 
     function check_DB() {
-      if ((week[today.getDay()] == 2) && (eval(hour) >= 15 && eval(hour) <= 17)){
+      if ((today.getDay() == 3) && (eval(hour) >= 15 && eval(hour) <= 17)){
         document.write("<img src='DB_dan.png'");
       }else if((week[today.getDay()] == 2) && (eval(hour) >= 14 && eval(hour) < 15)){
         document.write("<img src='DB_warn.png'");
