@@ -44,7 +44,7 @@ function getTodayLabel() {
 출처: https://elena90.tistory.com/entry/Java-Script-오늘날짜-특정-날짜의-요일-구하기-예제-년도-월-일-요일 [오니님의짱꺤뽀]
 
 function renderPage(date) {      
-    id_date.innerText = date.toLocaleString() + getTodayLabel();
+    id_date.innerText = date.toLocaleString();
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -58,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
             date = now;
             renderPage(date);
         }
-
-        id_date.innerText += getTodayLabel();
+        
     }, 1000);
 });
