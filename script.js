@@ -30,18 +30,16 @@ function ordinalDay(date) {
     return ordinal_table[date.getMonth()] + date.getDate();
 }
 
-function getTodayLabel() {
-    
-    var week = new Array('일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일');
-    
-    var today = new Date().getDay();
-    var todayLabel = week[today];
-    
-    return todayLabel;
+function weekNumber(date) {
+    var ordinal_day = ordinalDay(date);
+    var current_year = date.getFullYear();
+    var weekday = date.getDay();
+    var week = Math.floor((ordinal_day - weekday + 10) / 7);
+
+    if (week < 1) return lastWeek(current_year- 1);
+    if (week > lastWeek(current_year)) return 1;
+    return week;
 }
-
-
-출처: https://elena90.tistory.com/entry/Java-Script-오늘날짜-특정-날짜의-요일-구하기-예제-년도-월-일-요일 [오니님의짱꺤뽀]
 
 function renderPage(date) {      
     id_date.innerText = date.toLocaleString();
@@ -58,6 +56,5 @@ document.addEventListener('DOMContentLoaded', function() {
             date = now;
             renderPage(date);
         }
-        
     }, 1000);
 });
